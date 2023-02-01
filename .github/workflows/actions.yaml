@@ -3,7 +3,7 @@ name: Actions Workflow
 on:
   push:
   pull_request:
-    types: [closed, ssigned, opened]
+    types: [closed, assigned, opened, reopened]
 
 
 jobs:
