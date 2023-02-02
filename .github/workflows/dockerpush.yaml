@@ -7,6 +7,7 @@ on:
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  IMAGE_NAME: actionspush
 
 jobs:
   build:
@@ -28,6 +29,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: "${{ env.DOCKER_USERNAME }}/image_name:${{ env.GITHUB_SHA }}"
+        tags: "${{ env.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.GITHUB_SHA }}"
           #############3
 
